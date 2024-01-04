@@ -2,11 +2,13 @@ input.onButtonPressed(Button.A, function () {
     if (tx_power < 7) {
         tx_power += 1
     }
+    basic.showNumber(tx_power)
 })
 input.onButtonPressed(Button.B, function () {
     if (tx_power > 0) {
         tx_power += -1
     }
+    basic.showNumber(tx_power)
 })
 let data_string = ""
 let tx_power = 0
