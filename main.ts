@@ -29,4 +29,8 @@ loops.everyInterval(period, function () {
     data_string = "" + convertToText(weatherbit.temperature() / 100) + "," + convertToText(weatherbit.humidity() / 1024) + "," + convertToText(Math.round(weatherbit.pressure() / 25600)) + "," + convertToText(weatherbit.windSpeed()) + "," + weatherbit.windDirection()
     radio.sendString(data_string)
     basic.showString(data_string)
+    data_string = convertToText(weatherbit.rain())
+    radio.sendString(data_string)
+    basic.showString(data_string)
+    basic.showString("w")
 })
