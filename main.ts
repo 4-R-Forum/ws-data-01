@@ -1,3 +1,8 @@
+/**
+ * WS Transmit
+ * 
+ * Downoad to GOLD
+ */
 input.onButtonPressed(Button.A, function () {
     if (tx_power < 7) {
         tx_power += 1
@@ -12,7 +17,7 @@ input.onButtonPressed(Button.B, function () {
 })
 let data_string = ""
 let tx_power = 0
-let period = 60000
+let period = 300000
 tx_power = 7
 radio.setTransmitPower(tx_power)
 radio.setGroup(1)
